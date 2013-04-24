@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423161933) do
+ActiveRecord::Schema.define(:version => 20130423174455) do
 
   create_table "entries", :force => true do |t|
     t.string   "title",       :null => false
@@ -22,31 +22,32 @@ ActiveRecord::Schema.define(:version => 20130423161933) do
     t.text     "comments"
     t.text     "enclosure"
     t.string   "guid"
-    t.string   "pubdate"
+    t.string   "pubDate"
     t.integer  "feed_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "feeds", :force => true do |t|
-    t.string   "title",           :null => false
-    t.text     "link",            :null => false
-    t.string   "description",     :null => false
+    t.string   "title",          :null => false
+    t.text     "link",           :null => false
+    t.string   "description",    :null => false
     t.string   "language"
     t.string   "copyright"
-    t.string   "managing_editor"
-    t.string   "web_master"
-    t.date     "pub_date"
-    t.date     "last_build_date"
+    t.string   "managingEditor"
+    t.string   "webMaster"
+    t.date     "pubDate"
+    t.date     "lastBuildDate"
     t.string   "category"
     t.string   "generator"
     t.string   "docs"
     t.integer  "ttl"
     t.text     "image"
-    t.integer  "skip_hours"
-    t.integer  "skip_days"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.integer  "skipHours"
+    t.integer  "skipDays"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.text     "url"
   end
 
 end

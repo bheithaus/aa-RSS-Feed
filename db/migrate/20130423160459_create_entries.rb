@@ -9,7 +9,7 @@ class CreateEntries < ActiveRecord::Migration
       t.text        :comments
       t.text        :enclosure
       t.string      :guid
-      t.string      :pubdate
+      t.string      :pubDate
       t.references  :feed
 
       t.timestamps

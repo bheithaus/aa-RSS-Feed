@@ -6,17 +6,17 @@ class CreateFeeds < ActiveRecord::Migration
       t.string      :description, :null => false
       t.string      :language
       t.string      :copyright
-      t.string      :managing_editor
-      t.string      :web_master
-      t.date        :pub_date
-      t.date        :last_build_date
+      t.string      :managingEditor
+      t.string      :webMaster
+      t.date        :pubDate
+      t.date        :lastBuildDate
       t.string      :category
       t.string      :generator
       t.string      :docs
       t.integer     :ttl
       t.text        :image
-      t.integer     :skip_hours
-      t.integer     :skip_days
+      t.integer     :skipHours
+      t.integer     :skipDays
       t.timestamps
     end
   end

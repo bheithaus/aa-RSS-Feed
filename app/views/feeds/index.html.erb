@@ -1,1 +1,18 @@
 <h1>feed me</h1>
+<div id="index"></div>
+<div id="show"></div>
+<script>
+$(function() {
+  var feedsData = <%= @feeds.to_json.html_safe %>;
+  var entriesData = <%= @entries.to_json.html_safe %>;
+
+  window.RSS.initialize(
+    $('#index'),
+    $('#show'),
+    feedsData,
+    entriesData
+  );
+
+});
+
+</script>
